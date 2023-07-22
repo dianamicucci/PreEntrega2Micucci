@@ -1,27 +1,27 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 
 }
 h1{
-    color: rgb(119, 102, 212);
     font-size: 70px;
     background-color: rgb(139, 8, 190); 
     color: rgb(209, 228, 43);
-    padding: 2%;
+    padding: 3%;
     border:none;
     margin: 0px;
+    justify-content: center;
+    width: 100%;
 }
 header{
     background-color: rgb(139, 8, 190);
-    width: 50;
-    padding: 1%;
-    margin: 5px;
+    width: 30;
+    padding: 0%;
+    margin: 0px;
+   
     
-}
-a{
-    color: blueviolet;
 }
 .tarjeta{
     background-color: aliceblue;
@@ -40,7 +40,7 @@ a{
 }
 .tarjeta h3{
     color: rgb(115, 19, 194);
-    font-size: 24px;
+    font-size: 25px;
 }
 .tarjeta p{
     color: rgb(96, 13, 204);
@@ -74,8 +74,10 @@ a{
     background-color: blueviolet;
     color: aliceblue;
 }
-.tarjeta2 video{
+.tarjeta2 iframe{
     width: 100%;
+    align-items: center;
+    
 }
 .tarjeta2 {
     font-size: 24px;
@@ -95,6 +97,7 @@ a{
     height: 800px;
     background-image: cover;
     background-attachment: fixed;
+    align-items: center;
     
 }
 .main-texto ul{
@@ -156,7 +159,7 @@ a{
 }
 .galeria-tarjeta1{
     background-color: aliceblue;
-    width: 300px;
+    width: 325px;
     border: solid 2px;
     border-radius: 5px;
     padding: 10px;
@@ -165,7 +168,7 @@ a{
 }
 .galeria-tarjeta2{
     background-color: aliceblue;
-    width: 300px;
+    width: 325px;
     border: solid 2px;
     border-radius: 5px;
     padding: 10px;
@@ -174,7 +177,7 @@ a{
 }
 .galeria-tarjeta3{
     background-color: aliceblue;
-    width: 300px;
+    width: 325px;
     border: solid 2px;
     border-radius: 5px;
     padding: 10px;
@@ -183,7 +186,7 @@ a{
 }
 .galeria-tarjeta4{
     background-color: aliceblue;
-    width: 300px;
+    width: 325px;
     border: solid 2px;
     border-radius: 5px;
     padding: 10px;
@@ -194,6 +197,7 @@ a{
     display: flex; 
     flex-wrap: wrap;
     justify-content:space-evenly;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
 
 }
 .galeria-tarjeta1:hover{
@@ -222,20 +226,33 @@ a{
     padding: 10px;
     margin: 10px;
     font-size: 22px;
+    grid-template-columns: 1fr 2fr;
 
 }
 .contact-tarjetas{
     display: flex; 
     flex-wrap: wrap;
     justify-content:space-evenly;
+    grid-template-columns: 1fr 2fr;
 }
-.arriba a{
+.arriba{
+    background-color:rgb(139, 8, 190) ;
+    position: fixed;
+    width: 100%;
     font-size: 25px;
-   color: rgb(209, 228, 43);
-   text-decoration: underline;
-   background-color: rgb(139, 8, 190);
-   font-weight: bold;
-}  
+}
+.arriba ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.arriba ul li a{
+    color: rgb(209, 228, 43);
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px
+
+}
 
 .resaltado{
     color: gold;
@@ -243,4 +260,25 @@ a{
 .btn-enviarform:active {
     color:gold;
 
+}
+.footer {
+    color: rgb(209, 228, 43);
+   text-decoration: underline;
+   background-color: rgb(139, 8, 190);
+   font-size: 25px;
+   text-align: center;
+}
+.footer img{
+    align-items: center;
+}
+@media(max-width:1200){
+    .contact-tarjetas{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:1000){
+    .galeria-tarjetas{
+        grid-template-columns: 1fr;
+    }
 }
