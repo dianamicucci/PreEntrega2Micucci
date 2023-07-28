@@ -14,11 +14,13 @@ h1{
     margin: 0px;
     justify-content: center;
     width: 100%;
+    align-items: center;
+    text-align: center;
 }
 header{
     background-color: rgb(139, 8, 190);
     width: 30;
-    padding: 0%;
+    padding: 3%;
     margin: 0px;
    
     
@@ -128,6 +130,25 @@ header{
     
     color:rgb(139, 8, 190);
     font-style: oblique;
+}
+.disco-songs2 {
+    font-size: 25px;
+    
+    color:rgb(139, 8, 190);
+    font-style: oblique;
+}
+.disco-songs3 {
+    font-size: 25px;
+    
+    color:rgb(139, 8, 190);
+    font-style: oblique;
+}
+.disco{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+
 }
 .disco-tarjeta1{
     margin:10px
@@ -240,6 +261,13 @@ header{
     position: fixed;
     width: 100%;
     font-size: 25px;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+.arriba .menu{
+    display: none;
 }
 .arriba ul{
     list-style: none;
@@ -272,6 +300,9 @@ header{
     align-items: center;
 }
 @media(max-width:1200){
+    .arriba{
+        position: static;
+    }
     .contact-tarjetas{
         grid-template-columns: 1fr;
     }
@@ -280,5 +311,55 @@ header{
 @media(max-width:1000){
     .galeria-tarjetas{
         grid-template-columns: 1fr;
+    }
+}
+.carrousel{
+    height: 300px;
+    margin margin-top: 84px;
+}
+.carrousel-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.carrousel-inner h5{
+    font-size: px;
+    background-color: rgb(139, 8, 190); 
+    color: rgb(209, 228, 43);
+    padding: 3%;
+    border:none;
+    margin: 0px;
+    justify-content: center;
+    width: 100%; 
+
+}
+.header-video{
+    align-items: center;
+}
+@media(max-width:992px){
+    .arriba .menu{
+        display: block;
+        color: rgb(209, 228, 43);
+        font-size: 50px;
+        margin: 10px;
+
+    }
+    .arriba .menu:hover ul{
+       left: 0px;
+    }
+    .arriba ul{
+        position: fixed;
+        top: 0;
+        left: -750px;
+        background-color: rgb(209, 228, 43);
+        width: 70%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 100px;
+    }
+    .arriba ul li a{
+        color: rgb(139, 8, 190);;
     }
 }
